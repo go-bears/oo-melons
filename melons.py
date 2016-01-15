@@ -60,3 +60,33 @@ class InternationalMelonOrder(AbstractMelonOrder):
         """Return the country code."""
 
         return self.country_code
+
+""" 
+psuedo code for oo-melons part 2&3
+
+change get_total()
+add if statement for species == Christmas Melons:
+change base price * 1.5
+
+change get_total:
+if international and if melons < 10
+then 3$ to base fee after taxes
+
+
+return get_total
+
+part 3
+
+create class GovernmentMelonOrder(AbstractMelonOrder)
+include variable passed_inspection = False
+
+create method inspect_melons(takes in a Boolean) 
+
+ and inspect_melons updates passed_inspection variable
+ set tax = 0
+takes in passed_inspection variable
+ 
+
+
+
+"""
