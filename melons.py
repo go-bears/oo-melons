@@ -69,19 +69,19 @@ class InternationalMelonOrder(AbstractMelonOrder):
 
         return self.country_code
 
-""" 
-psuedo code for oo-melons part 2&3
 
-change get_total()
-add if statement for species == Christmas Melons:
-change base price * 1.5
+class GovernmentMelonOrder(AbstractMelonOrder):
+    """Class contains inspect_melons method and checks if melons were inspected  """
 
-change get_total:
-if international and if melons < 10
-then 3$ to base fee after taxes
+    def __init__(self, species, qty):
+        self.passed_inspection = False
+        super(GovernmentMelonOrder, self).__init__(species, qty, "domestic", 0.00)
+
+    def inspect_melons(self):
+        self.passed_inspection = True
 
 
-return get_total
+"""
 
 part 3
 
@@ -94,6 +94,15 @@ create method inspect_melons(takes in a Boolean)
  set tax = 0
 takes in passed_inspection variable
  
+
+splurge prices:
+
+need random_int (5,10)
+random_int needs to be an instance attribute
+
+add to AbstractMelonOrder() class:
+get_base_price method
+update get_total() to include get_base_price method
 
 
 
